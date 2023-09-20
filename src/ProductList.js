@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 
 function ProductList() {
     const [data, setData] = useState([]);
+    const [showAll, setShowAll] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -25,8 +26,9 @@ function ProductList() {
     if (error) return <div>Error: {error.message}</div>;
 
     return (
+    <>
     <div className='ProductList'>
-        {data.map(product => (
+        {data.slice(0, showAll ? data.length : 6).map(product =>(
             <>
             <div className='Product'>
                 <h2>
@@ -38,6 +40,12 @@ function ProductList() {
             </>
         ))}
     </div>
+    <div className='SMButton'>
+        {!showAll && (
+            <button onClick={() => setShowAll(true)}>Show More</button>
+            )}
+    </div>
+    </>
     );
 }
 
