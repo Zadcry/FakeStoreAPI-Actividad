@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <header>
-
+      <Profile />
     </header>
     <div className="App">
       <Product />

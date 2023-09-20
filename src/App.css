@@ -5,15 +5,31 @@
 .ProductList{
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: space-around;
 }
 
 .Product{
   width: 25vw;
   text-align: center;
-  margin: 0vw 3vw
+  margin: 1vh 2vw;
+  border: 3px solid black;
+  border-radius: 3%;
+  padding: 1vh 1vw;
 }
 
 .Product h2{
 
+}
+
+.SMButton{
+  text-align: center;
+}
+
+header{
+  text-align: right;
+}
+.UserProfile{
+  border: 3px solid grey;
+  border-radius: 20%;
+  max-width: fit-content;
 }
