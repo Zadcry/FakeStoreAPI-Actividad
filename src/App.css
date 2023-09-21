@@ -15,21 +15,41 @@
   border: 3px solid black;
   border-radius: 3%;
   padding: 1vh 1vw;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.Product h2{
-
+.Product:hover {
+  background-color: lightblue; /* Change the background color on hover */
 }
 
 .SMButton{
-  text-align: center;
+  text-align: center; 
+}
+
+header h2:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 header{
-  text-align: right;
+  display: flex;
+  justify-content: space-around;
 }
+
 .UserProfile{
-  border: 3px solid grey;
-  border-radius: 20%;
+  border: 4px solid grey;
+  border-radius: 50%;
   max-width: fit-content;
+  padding: 10px
+}
+
+.UserProfile:hover{
+  background-color: lightgrey;
+  cursor: pointer;
 }

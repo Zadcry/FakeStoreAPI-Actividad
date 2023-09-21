@@ -19,14 +19,19 @@ function Profile(){
             });
         }, []);
 
+    let iniciales = ""+(data.name.firstname[0].toUpperCase())+(data.name.lastname[0].toUpperCase())+""
+    iniciales.toUpperCase();
 
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error: {error.message}</div>;
 
         return(
-            <div className='UserProfile'>
-                <h1>{data.name.firstname[0]}{data.name.lastname[0]}</h1>
-            </div>
+            <>
+            <h1>Some Store</h1>
+            <h2>All products</h2>
+            <h2>About</h2>
+            <h1 className='UserProfile'>{iniciales}</h1>
+            </>
         );
 }
 
