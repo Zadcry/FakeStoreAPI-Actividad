@@ -30,7 +30,7 @@ function ProductList() {
     <div className='ProductList'>
         {data.slice(0, showAll ? data.length : 6).map(product =>(
             <>
-            <div className='Product'>
+            <div className="Product">
                 <h2>
                     <i>{product.title} </i>
                 </h2>
