@@ -40,6 +40,8 @@ header h2:hover{
 header{
   display: flex;
   justify-content: space-around;
+  color: white;
+  background-color: black;
 }
 
 .UserProfile{
