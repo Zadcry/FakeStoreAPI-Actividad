@@ -7,7 +7,7 @@ function Profile(){
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/users/1')
+        fetch('https://fakestoreapi.com/users/6')
             .then(response => response.json())
             .then(data => {
             setData(data);
@@ -19,9 +19,6 @@ function Profile(){
             });
         }, []);
 
-    let iniciales = ""+(data.name.firstname[0].toUpperCase())+(data.name.lastname[0].toUpperCase())+""
-    iniciales.toUpperCase();
-
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error: {error.message}</div>;
 
@@ -30,7 +27,7 @@ function Profile(){
             <h1>Some Store</h1>
             <h2>All products</h2>
             <h2>About</h2>
-            <h1 className='UserProfile'>{iniciales}</h1>
+            <h1 className='UserProfile'>{(data.name.firstname[0].toUpperCase())+(data.name.lastname[0].toUpperCase())}</h1>
             </>
         );
 }
