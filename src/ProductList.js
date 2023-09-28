@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client';
+import { Link } from "react-router-dom";
 
 
 function ProductList() {
@@ -28,7 +29,7 @@ function ProductList() {
     return (
     <>
     <div className='ProductList'>
-        {data.slice(0, showAll ? data.length : 6).map(product =>(
+        {data.map(product =>(
             <>
             <div className="Product">
                 <h2>
@@ -36,15 +37,16 @@ function ProductList() {
                 </h2>
                 <img width="150" src={product.image} alt={product.category} />
                 <h2>${product.price}</h2>
+                <Link to={`products/${product.id}`}>Ver mas...</Link>
             </div>
             </>
         ))}
     </div>
-    <div className='SMButton'>
+    {/*<div className='SMButton'>
         {!showAll && (
             <button onClick={() => setShowAll(true)}>Show More</button>
             )}
-    </div>
+    </div>*/}
     </>
     );
 }
