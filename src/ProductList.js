@@ -1,12 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import ReactDOM from 'react-dom/client';
 import { Link } from "react-router-dom";
 
 
-function ProductList() {
+export function ProductList() {
     const [data, setData] = useState([]);
-    const [showAll, setShowAll] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -37,16 +35,11 @@ function ProductList() {
                 </h2>
                 <img width="150" src={product.image} alt={product.category} />
                 <h2>${product.price}</h2>
-                <Link to={`products/${product.id}`}>Ver mas...</Link>
+                <Link to={`products/${product.id}`}>Show More</Link>
             </div>
             </>
         ))}
     </div>
-    {/*<div className='SMButton'>
-        {!showAll && (
-            <button onClick={() => setShowAll(true)}>Show More</button>
-            )}
-    </div>*/}
     </>
     );
 }

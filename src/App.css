@@ -24,6 +24,20 @@
   align-items: center;
 }
 
+.ProductInCar{
+  width: 25vw;
+  text-align: center;
+  margin: 1vh 2vw;
+  border: 3px solid black;
+  border-radius: 3%;
+  padding: 1vh 1vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .Product:hover {
   background-color: lightblue; /* Change the background color on hover */
 }
