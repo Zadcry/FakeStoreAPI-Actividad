@@ -2,6 +2,11 @@
 
 }
 
+.Title{
+  max-width: fit-content;
+  display: inline-block;
+}
+
 .ProductList{
   display: flex;
   flex-wrap: wrap;
@@ -15,9 +20,7 @@
   border: 3px solid black;
   border-radius: 3%;
   padding: 1vh 1vw;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
+  transition: all 300ms;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,7 +28,21 @@
 }
 
 .Product:hover {
-  background-color: lightblue; /* Change the background color on hover */
+  transform: translateY(-2px);
+}
+
+.productInCart{
+  width: 25vw;
+  text-align: center;
+  margin: 1vh 2vw;
+  border: 3px solid black;
+  border-radius: 3%;
+  padding: 1vh 1vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .detailedProduct{
@@ -47,13 +64,56 @@
 }
 
 .AtCButton{
-  text-align: center; 
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+  background: transparent;
+  color: #000000;
+  box-shadow: 0 0 0 3px #000000 inset;
 }
 
-header h2:hover{
+.AtCButton:hover{
+  transform: translateY(-2px);
+}
+
+.AtCButton:active{
+  background-color: lightgray;
+}
+  
+.HNav{
+  text-decoration: none;
+  color: white;
+}
+
+.HNav:hover{
   cursor: pointer;
   text-decoration: underline;
 }
+
+.ProductNav{
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 8px;
+  margin: 1vh 5vw;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+}
+
+.ProductNav:hover{
+  transform: translateY(-2px);
+}
+
 
 header{
   display: flex;
@@ -76,5 +136,9 @@ header{
 }
 
 .detailedProduct{
+  text-align: center;
+}
+
+.ShoppingCart{
   text-align: center;
 }
