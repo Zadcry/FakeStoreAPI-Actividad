@@ -35,7 +35,7 @@ export function ProductList() {
                 </h2>
                 <img width="150" src={product.image} alt={product.category} />
                 <h2>${product.price}</h2>
-                <Link to={`products/${product.id}`}>Show More</Link>
+                <Link className='ProductNav' to={`products/${product.id}`}>Show More</Link>
             </div>
             </>
         ))}

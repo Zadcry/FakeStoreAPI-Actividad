@@ -29,9 +29,9 @@ function Product({cart, setCart}){
                 <img width="150" src={product.image} alt={product.category} />
                 <p>{product.description}</p>
                 <h2>${product.price}</h2>
-                <button onClick={addToCart}>Add to Cart</button>
-                <Link to="/cart">Go to Cart</Link>
-                <Link to={"/"}>Go back</Link>
+                <button className="AtCButton" onClick={addToCart}>Add to Cart</button>
+                <Link className="ProductNav" to="/cart">Go to Cart</Link>
+                <Link className="ProductNav" to={"/"}>Go back</Link>
             </div>
             </>
         ) : (
