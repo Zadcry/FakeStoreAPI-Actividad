@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useGlobalState } from './Reducer.js';
 
-function Cart({ cart, setCart }) {
+function Cart() {
+    const { state, dispatch } = useGlobalState();
 
     const removeFromCart = (productId) => {
-        setCart(cart.filter(product => product.id !== productId));
+        dispatch({ type: 'REMOVE_FROM_CART', payload: productId });
     };
 
     return (
@@ -12,15 +14,13 @@ function Cart({ cart, setCart }) {
         <div className="ShoppingCart">
             <h1 className="Title">Shopping Cart🛒</h1>         
             <Link className="ProductNav" to={"/"}>Go back</Link>
-            {cart.map(product => (
-                <>
+            {state.cart.map(product => (
                 <div className="productInCart">
-                <h3>{product.title}</h3>
-                <img width="150" src={product.image} alt={product.category} />
-                <h2>${product.price}</h2>
+                <img src={product.image} alt={product.name} width="100" />
+                    <h3>{product.name}</h3>
+                    <h3>${product.price}</h3>
                 <button className="AtCButton" onClick={() => removeFromCart(product.id)}>Remove from Cart</button>
                 </div>
-                </>
             ))}
         </div>
 
